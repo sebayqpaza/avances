@@ -120,11 +120,11 @@
                 <li>
                     <img src="{{ zapatilla.imagen.url }}" alt="{{ zapatilla.nombre }}">
                     <div class="button-container">
-                        <h3 href="{% url 'detalle_zapatilla' zapatilla.id %}">{{ zapatilla.nombre }}</h3>
+                        <h3 href="{% url 'detalles_zapatilla' zapatilla.id %}">{{ zapatilla.nombre }}</h3>
                         <form method="post" action="{% url 'agregar_al_carrito' zapatilla.id %}">
                             {% csrf_token %}
-                            <button type="submit">Agregar al Carrito</button>
-                        </form>
+                            <button type="submit">agregar_al_carrito</button>
+                        <form method="post" action="{% url 'detalles_zapatilla' zapatilla.id %}">
                     </div>
                 </li>
             {% endfor %}

@@ -103,6 +103,7 @@
         <div class="description">
             <p>{{ zapatilla.descripcion }}</p>
             <p>Precio: ${{ zapatilla.precio }}</p>
+            <a href="{% url 'detalles_zapatilla' zapatilla.id %}">{{ zapatilla.nombre }}</a>
         </div>
     </div>
 </body>
